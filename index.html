@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+
+    <title>Anemia</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- custom js file link  -->
+    <script src="js/script.js" defer></script>
+
+    <!-- custom Modal box css-->
+    <link rel="stylesheet" href="modalbox.css">
+
+    <!-- custom Modal box js-->
+    <script src="js/modalbox.js" defer></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/css/style.css">
+<link rel="stylesheet" type="text/css" href="css/css/responsive.css">
+
+    <link rel="stylesheet" type="text/css" href="css/css/jquery.convform.css">
+    <script type="text/javascript" src="js/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/js/jquery.convform.js"></script>
+    <script type="text/javascript" src="js/js/custom.js"></script>
+
+    
+    
+
+
+
+</head>
+
+
+<body style="background-color: #111;">
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a data-aos="zoom-in-left" data-aos-delay="150" href="#" class="logo"> <img src="images/red-blood-cells.png"
+                style="height:45px"><i></i>Anemia </a>
+
+        <nav class="navbar">
+            <a data-aos="zoom-in-left" data-aos-delay="300" href="#home">home</a>
+            <a data-aos="zoom-in-left" data-aos-delay="450" href="#about">about</a>
+            <a data-aos="zoom-in-left" data-aos-delay="600" href="#destination">symptoms</a>
+            <a data-aos="zoom-in-left" data-aos-delay="750" href="#services">blogs</a>
+            <a data-aos="zoom-in-left" data-aos-delay="900" href="#gallery">doctors</a>
+            <a data-aos="zoom-in-left" data-aos-delay="1150" href="#blogs">preventions</a>
+            <a data-aos="zoom-in-left" data-aos-delay="1300">
+                <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+            </a>
+            <a href="#" onclick="signOut();">Sign out</a>
+        </nav>
+
+        <a data-aos="zoom-in-left" data-aos-delay="1300" href="#book-form" class="btnn">book now</a>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <span data-aos="fade-up" data-aos-delay="150">ANEMIA</span>
+            <h4 data-aos="fade-up" data-aos-delay="300">Also called: Iron poor blood</h4>
+            <p data-aos="fade-up" data-aos-delay="450">Anemia is a condition in which you lack enough healthy red blood
+                cells to carry adequate oxygen to your body's tissues. Having anemia, also referred to as low
+                hemoglobin, can make you feel tired and weak</p><br>
+            <h2 data-aos="fade-up" data-aos-delay="300" style="font-weight: bolder;">CONSULT DOCTOR </h2>
+            <!--<a data-aos="fade-up" data-aos-delay="600" href="#" class="btn"> -->
+            <button data-aos="fade-up" data-aos-delay="600" onclick="myFunction()" class="javabtn">book now</button></a>
+
+
+
+
+            <!-- ChatBot -->
+            <div class="chat_icon">
+                <i class="fa fa-comments" aria-hidden="true"></i>
+            </div>
+
+            <div class="chat_box">
+                <div class="my-conv-form-wrapper">
+                    <form action="" method="" class="hidden">
+
+                        <select data-conv-question="Hello! How can I help you" name="category">
+                            <option value="WebDevelopment">Website Development ?</option>
+                            <option value="DigitalMarketing">Digital Marketing ?</option>
+                        </select>
+
+                        <div data-conv-fork="category">
+                            <div data-conv-case="WebDevelopment">
+                                <input type="text" name="domainName"
+                                    data-conv-question="Please, tell me your domain name">
+                            </div>
+                            <div data-conv-case="DigitalMarketing" data-conv-fork="first-question2">
+                                <input type="text" name="companyName"
+                                    data-conv-question="Please, enter your company name">
+                            </div>
+                        </div>
+
+                        <input type="text" name="name" data-conv-question="Please, Enter your name">
+
+                        <input type="text" data-conv-question="Hi {name}, <br> It's a pleasure to meet you."
+                            data-no-answer="true">
+
+                        <input data-conv-question="Enter your e-mail"
+                            data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                            type="email" name="email" required placeholder="What's your e-mail?">
+
+                        <select data-conv-question="Please Conform">
+                            <option value="Yes">Conform</option>
+                        </select>
+
+                    </form>
+                </div>
+            </div>
+            <!-- ChatBot end -->
+
+
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- booking form section starts  -->
+
+    <section class="book-form" id="book-form">
+
+        <form action="index.php" method="post">
+            <div data-aos="zoom-in" data-aos-delay="150" class="inputBox">
+                <span>Name</span>
+                <input type="text" placeholder="type your name" name="name" id="name" >
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="300" class="inputBox">
+                <span>Appointment Date</span>
+                <input type="date" name="appointmentdate" id="appointmentdate" value="">
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="450" class="inputBox">
+                <span>Age</span>
+                <input type="number" placeholder="age" name="age" id="age" value="">
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="600" class="inputBox">
+                <span>SEX</span>
+                <!-- <input type="radio" value="MALE" id="SEX" name="SEX">
+                <input type="radio" value="FEMALE" id="SEX" name="SEX">
+                <input type="radio" value="OTHERS" id="SEX" name="SEX"> -->
+                <input type="text" placeholder="Male,Female,Others?" value="" name="sex" id="sex">
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="750" class="inputBox">
+                <span>Phone number</span>
+                <input type="number" placeholder="enter your contact no." name="phonenumber" id="phonenumber" value="">
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="900" class="inputBox">
+                <span>Email ID</span>
+                <input type="email" placeholder="enter your email" name="emailid" id="emailid" value="">
+            </div>
+            <input data-aos="zoom-in" data-aos-delay="1050" type="submit" value="Confirm" class="btnn">
+        </form>
+
+    </section>
+
+    <!-- booking form section ends -->
+
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+
+        <div class="video-container" data-aos="fade-right" data-aos-delay="300">
+            <video src="images/Anemia of chronic disease - an Osmosis Preview.mp4" muted autoplay loop
+                class="video"></video>
+            <div class="controls">
+                <span class="control-btn" data-src="\images\Anemia of chronic disease - an Osmosis Preview.mp4"></span>
+                <span class="control-btn" data-src="\images\videoplayback.mp4"></span>
+                <span class="control-btn" data-src="\images\What is Anaemia_.mp4"></span>
+            </div>
+        </div>
+
+        <div class="content" data-aos="fade-left" data-aos-delay="600">
+            <span>what is ANEMIA?</span>
+            <!-- <h3></h3> -->
+            <p>Anemia can be temporary or long term and can range from mild to severe. In most cases, anemia has more
+                than one cause. See your doctor if you suspect that you have anemia.</p>
+            <a href="#" class="btnn">read more</a>
+        </div>
+
+    </section>
+
+    <!-- about section ends -->
+
+    <!-- destination section starts  -->
+
+    <section class="destination" id="destination">
+
+        <div class="heading">
+            <!-- <span>Types of ANEMIA</span> -->
+            <h1>TYPES OF ANEMIA</h1>
+        </div>
+
+        <div class="box-container">
+
+            <div class="box" data-aos="fade-up" data-aos-delay="150">
+                <div class="image">
+                    <img src="images/pernicious.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Pernicious anemia</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                    <button id="PerniciousBtn" class="readmoreBtn">read more <i class="fas fa-angle-right"></i></button>
+
+                </div>
+
+            </div>
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <h1>Pernicious anemia</h1>
+                    <span class="close">&times;</span>
+                    <p>In a strict sense, pernicious anemia happens when a person lacks something called intrinsic
+                        factor, which lets them absorb vitamin B12. Without vitamin B12, the body cannot develop healthy
+                        red blood cells. Other types of anemia that involve lack of B vitamins, such as B9 (folic acid),
+                        are also often lumped in as pernicious anemia. This name may refer to other conditions,
+                        including folic acid deficiency anemia and Addison’s anemia, even though there is no intrinsic
+                        factor deficiency.</p>
+                </div>
+
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
+                <div class="image">
+                    <img src="images/hemolytic.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Hemolytic anemia</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                    <button id="hemolyticBtn" class="readmoreBtn">read more <i class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+            <div id="myModal1" class="modal1">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close1">&times;</span>
+                    <h1>Hemolytic anemia</h1>
+                    <p>In a strict sense, pernicious anemia happens when a person lacks something called intrinsic
+                        factor, which lets them absorb vitamin B12. Without vitamin B12, the body cannot develop healthy
+                        red blood cells. Other types of anemia that involve lack of B vitamins, such as B9 (folic acid),
+                        are also often lumped in as pernicious anemia. This name may refer to other conditions,
+                        including folic acid deficiency anemia and Addison’s anemia, even though there is no intrinsic
+                        factor deficiency.</p>
+                </div>
+
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="450">
+                <div class="image">
+                    <img src="images/sickle.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Sickle cell anemia</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                    <button id="skinCellBtn" class="readmoreBtn">read more <i class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+            <div id="myModal2" class="modal2">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close2">&times;</span>
+                    <h1>Skin anemia</h1>
+                    <p>In a strict sense, pernicious anemia happens when a person lacks something called intrinsic
+                        factor, which lets them absorb vitamin B12. Without vitamin B12, the body cannot develop healthy
+                        red blood cells. Other types of anemia that involve lack of B vitamins, such as B9 (folic acid),
+                        are also often lumped in as pernicious anemia. This name may refer to other conditions,
+                        including folic acid deficiency anemia and Addison’s anemia, even though there is no intrinsic
+                        factor deficiency.</p>
+                </div>
+
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="600">
+                <div class="image">
+                    <img src="images/diamond.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Diamond-Blackfan anemia</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                    <button id="diamondBtn" class="readmoreBtn">read more <i class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+            <div id="myModal3" class="modal3">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close3">&times;</span>
+                    <h1>Diamond-Blackfan anemia</h1>
+                    <p>In a strict sense, pernicious anemia happens when a person lacks something called intrinsic
+                        factor, which lets them absorb vitamin B12. Without vitamin B12, the body cannot develop healthy
+                        red blood cells. Other types of anemia that involve lack of B vitamins, such as B9 (folic acid),
+                        are also often lumped in as pernicious anemia. This name may refer to other conditions,
+                        including folic acid deficiency anemia and Addison’s anemia, even though there is no intrinsic
+                        factor deficiency.</p>
+                </div>
+
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="750">
+                <div class="image">
+                    <img src="images/aplastic.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Aplastic anemia</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                    <button id="aplasticBtn" class="readmoreBtn">read more <i class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+            <div id="myModal4" class="modal4">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close4">&times;</span>
+                    <h1>Aplastic anemia</h1>
+                    <p>In a strict sense, pernicious anemia happens when a person lacks something called intrinsic
+                        factor, which lets them absorb vitamin B12. Without vitamin B12, the body cannot develop healthy
+                        red blood cells. Other types of anemia that involve lack of B vitamins, such as B9 (folic acid),
+                        are also often lumped in as pernicious anemia. This name may refer to other conditions,
+                        including folic acid deficiency anemia and Addison’s anemia, even though there is no intrinsic
+                        factor deficiency.</p>
+                </div>
+
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="900">
+                <div class="image">
+                    <img src="images/fancomi.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Fanconi anemia</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                    <button id="fanconiBtn" class="readmoreBtn">read more <i class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+            <div id="myModal5" class="modal5">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close5">&times;</span>
+                    <h1>Fanconi anemia</h1>
+                    <p>In a strict sense, pernicious anemia happens when a person lacks something called intrinsic
+                        factor, which lets them absorb vitamin B12. Without vitamin B12, the body cannot develop healthy
+                        red blood cells. Other types of anemia that involve lack of B vitamins, such as B9 (folic acid),
+                        are also often lumped in as pernicious anemia. This name may refer to other conditions,
+                        including folic acid deficiency anemia and Addison’s anemia, even though there is no intrinsic
+                        factor deficiency.</p>
+                </div>
+
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="1150">
+                <div class="image">
+                    <img src="images/mediterranean.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Mediterranean anemia</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                    <button id="MediterraneanBtn" class="readmoreBtn">read more <i
+                            class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+            <div id="myModal6" class="modal6">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close6">&times;</span>
+                    <h1>Mediterranean anemia</h1>
+                    <p>In a strict sense, pernicious anemia happens when a person lacks something called intrinsic
+                        factor, which lets them absorb vitamin B12. Without vitamin B12, the body cannot develop healthy
+                        red blood cells. Other types of anemia that involve lack of B vitamins, such as B9 (folic acid),
+                        are also often lumped in as pernicious anemia. This name may refer to other conditions,
+                        including folic acid deficiency anemia and Addison’s anemia, even though there is no intrinsic
+                        factor deficiency.</p>
+                </div>
+
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="1300">
+                <div class="image">
+                    <img src="images/vegan.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Vegetarian or vegan anemia</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                    <button id="VegBtn" class="readmoreBtn">read more <i class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+            <div id="myModal7" class="modal7">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close7">&times;</span>
+                    <h1>Vegetarian anemia</h1>
+                    <p>In a strict sense, pernicious anemia happens when a person lacks something called intrinsic
+                        factor, which lets them absorb vitamin B12. Without vitamin B12, the body cannot develop healthy
+                        red blood cells. Other types of anemia that involve lack of B vitamins, such as B9 (folic acid),
+                        are also often lumped in as pernicious anemia. This name may refer to other conditions,
+                        including folic acid deficiency anemia and Addison’s anemia, even though there is no intrinsic
+                        factor deficiency.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- destination section ends -->
+
+    <!-- services section starts  -->
+
+    <section class="services" id="services">
+
+        <div class="heading">
+            <span>our services</span>
+            <h1>countless expericences</h1>
+        </div>
+
+        <div class="box-container">
+
+            <!-- <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+                <i class="fas fa-globe"></i>
+                <h3>Causes </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, cumque.</p>
+            </div> -->
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+                <i class="fas fa-hiking"></i>
+                <h3>Cause Of Anemia</h3>
+                <p>What Are the cause of Anemia</p>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+                <i class="fas fa-utensils"></i>
+                <h3>Diet</h3>
+                <p>Diet is essential part for the recovery. Because what you eat 'MATTER!!!'</p>
+            </div>
+
+            <!-- <div class="box" data-aos="zoom-in-up" data-aos-delay="600">
+                <i class="fas fa-hotel"></i>
+                <h3>affordable hotels</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, cumque.</p>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="750">
+                <i class="fas fa-wallet"></i>
+                <h3>affordable price</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, cumque.</p>
+            </div> -->
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="900">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 support</h3>
+                <p>We are here for you. <br> You can contact us anytime</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- services section ends -->
+
+    <!-- gallery section starts  -->
+
+    <section class="gallery" id="gallery">
+
+        <div class="heading">
+            <span>Doctor's</span>
+            <h1>top Hospital's in INDIA for Anemia</h1>
+        </div>
+
+        <div class="box-container">
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="images/kokilaben.jpg" alt="">
+                        </div>
+                        <div class="flip-box-back" style="text-align: center;">
+                            <span>KOKILABEN HOSPITAL</span>
+                            <h3>MUMBAI</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="images/NANAVATI.jpg" alt="">
+                        </div>
+                        <div class="flip-box-back">
+                            <span>Nanavati Hospital</span>
+                            <h3>mumbai</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="images/medanta.jpg" alt="">
+                        </div>
+                        <div class="flip-box-back">
+                            <span>Medanta Hospital</span>
+                            <h3>Gurgaon, Delhi</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="images/blk.jpg" alt="">
+                        </div>
+                        <div class="flip-box-back">
+                            <span>BLK HOSPITAL</span>
+                            <h3>New Delhi</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="images/global.jpg" alt="">
+                        </div>
+                        <div class="flip-box-back">
+                            <span>Global Hospital </span>
+                            <h3>Chennai</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="images/appolo.jpg" alt="">
+                        </div>
+                        <div class="flip-box-back">
+                            <span>Apollo gleneagles Hospital</span>
+                            <h3>Kolkata</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="images/fortis.jpg" alt="">
+                        </div>
+                        <div class="flip-box-back">
+                            <span>Fortis Hospital</span>
+                            <h3>Noida, New Delhi</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="images/manipal.jpg" alt="">
+                        </div>
+                        <div class="flip-box-back">
+                            <span>Manipal hospitals</span>
+                            <h3>Dwarka , New Delhi</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="images/fortis_hospital_bangalore.jpg" alt="">
+                        </div>
+                        <div class="flip-box-back">
+                            <span>Fortis Hospital</span>
+                            <h3>Bangalore</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- gallery section ends -->
+
+    <!-- review section starts  -->
+
+    <section class="review">
+
+        <div class="content" data-aos="fade-right" data-aos-delay="300">
+            <span>testimonials</span>
+            <h3>We Believe In our patient</h3>
+            <p>Our Main Focous is to improve the condition of the patient's health, and making them believe in their
+                ownself i.e. nobody can cure if they doubt their ownself</p>
+        </div>
+
+        <div class="box-container" data-aos="fade-left" data-aos-delay="600">
+
+            <div class="box">
+                <p>Thanks for the treatment</p>
+                <div class="user">
+                    <img src="images/pic-1.png" alt="">
+                    <div class="info">
+                        <h3>babu rao</h3>
+                        <span>Patient</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <p>Doctor's really care about their patient</p>
+                <div class="user">
+                    <img src="images/pic-2.png" alt="">
+                    <div class="info">
+                        <h3>shyam</h3>
+                        <span>Patient</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <p>Apperiating how doctor and nureses treat, they all are very nice</p>
+                <div class="user">
+                    <img src="images/pic-3.png" alt="">
+                    <div class="info">
+                        <h3>raju</h3>
+                        <span>Patient</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <p>Thanks for creating this specific page this means a lot for patient having anemia.</p>
+                <div class="user">
+                    <img src="images/pic-4.png" alt="">
+                    <div class="info">
+                        <h3>ramu</h3>
+                        <span>User</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- blogs section starts  -->
+
+    <section class="blogs" id="blogs">
+
+        <div class="heading">
+            <span>blogs & posts</span>
+            <h1>we untold stories</h1>
+        </div>
+
+        <div class="box-container">
+
+            <div class="box" data-aos="fade-up" data-aos-delay="150">
+                <div class="image">
+                    <img src="images/againstAnemia.jpg" alt="">
+                </div>
+                <div class="content">
+                    <a href="MainWebpage.html" class="link" target="_blank">Against Anemia</a>
+                    <p>LET US FIGHT AGAINST ANAEMIA TOGETHER</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i> 20th Noveber, 2021</a>
+                        <a href="#"><i class="fas fa-user"></i> by Hariom and AsimVaibhav</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
+                <div class="image">
+                    <img src="images/Nutrition.png" alt="">
+                </div>
+                <div class="content">
+                    <a href="MainWebpage.html" class="link" target="_blank">Nutrition</a>
+                    <p>about eating a healthy and balanced diet</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i> 20th Noveber, 2021</a>
+                        <a href="#"><i class="fas fa-user"></i> by Hariom and AsimVaibhav</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-delay="450">
+                <div class="image">
+                    <img src="images/treatment.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="link" target="_blank">TREATMENTS and SPECIALISTS</a>
+                    <p>Treatment depends on the underlying diagnosis</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i> 20th Noveber, 2021</a>
+                        <a href="#"><i class="fas fa-user"></i> by Hariom and AsimVaibhav</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- blogs section ends -->
+
+    <!-- banner section starts  -->
+
+    <!-- <div class="banner">
+
+        <div class="content" data-aos="zoom-in-up" data-aos-delay="300">
+            <span>start your adventures</span>
+            <h3>Let's Explore This World</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatum praesentium amet quibusdam quam
+                officia suscipit odio.</p>
+            <a href="#book-form" class="btn">book now</a>
+        </div>
+
+    </div> -->
+
+    <!-- banner section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box" data-aos="fade-up" data-aos-delay="150">
+                <a href="#" class="logo"> <i class=""><img src="images/red-blood-cells.png" height="30px"
+                            width="30px"></i>ANEMIA</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, ad?</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
+                <h3>quick links</h3>
+                <a href="#home" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+                <a href="#about" class="links"> <i class="fas fa-arrow-right"></i> About </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i>symptoms</a>
+                <a href="#services" class="links"> <i class="fas fa-arrow-right"></i> blogs </a>
+                <a href="#gallery" class="links"> <i class="fas fa-arrow-right"></i>doctors </a>
+                <a href="#blogs" class="links"> <i class="fas fa-arrow-right"></i> preventions </a>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-delay="450">
+                <h3>contact info</h3>
+                <p> <i class="fas fa-map"></i> mumbai, india </p>
+                <p> <i class="fas fa-phone"></i> 7304716463/7738141576</p>
+                <p> <i class="fas fa-envelope"></i> jatinvishwakarma75@gmail.com </p>
+                <p> <i class="fas fa-clock"></i> 10:00am - 10:00pm </p>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-delay="600">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <form action="">
+                    <input type="email" name="" placeholder="enter your email" class="email" id="">
+                    <input type="submit" value="subscribe" class="btnn">
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="credit">created by <span>JATIN & SAURABH COMPANY </span> | all rights reserved!</div>
+
+    <!-- footer section ends -->
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+
+        AOS.init({
+            duration: 800,
+            offset: 150,
+        });
+
+    </script>
+
+</body>
+
+</html>
